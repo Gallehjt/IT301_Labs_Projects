@@ -1,0 +1,89 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* General page styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f8;
+    color: #222222;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #243b55;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 5px solid #4f709c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+header p {
+    font-size: 18px;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    border: 2px solid #d5dbe3;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2 {
+    color: #243b55;
+    font-size: 26px;
+    border-bottom: 2px solid #4f709c;
+    padding-bottom: 8px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Project list */
+ul {
+    list-style-type: square;
+    padding-left: 30px;
+}
+
+li {
+    padding: 8px;
+}
+
+/* Links */
+a {
+    color: #2a52be;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #163172;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #243b55;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-top: 5px solid #4f709c;
