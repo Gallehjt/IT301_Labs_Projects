@@ -85,3 +85,6 @@ footer {
     background-color: #ffe6e6;
     text-align: center;
 }
+body {
+    background-color: yellow !important;
+}
