@@ -45,9 +45,9 @@ main {
 section {
     background-color: #ffffff;
     border: 2px solid #b8ceb8;
-    border-radius: 12px;
+    border-radius: 20px;
     padding: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(31, 77, 54, 0.12);
 }
 
@@ -97,6 +97,6 @@ footer {
     background-color: #1f4d36;
     color: white;
     text-align: center;
-    padding: 18px;
+    padding: 12px;
     border-top: 5px solid #79a879;
 }
