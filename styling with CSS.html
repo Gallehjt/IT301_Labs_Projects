@@ -1,45 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Styling with CSS</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+    padding: 10px;
+    margin: 0;
+}
+
+section {
+    margin: 20px 0;
+}
+
+ul {
+    padding-left: 40px;
+}
+
+ul ul ul {
+    margin-top: 10px;
+}
 
 
-  <header>
-    <h1>Styling with <span>css</span></h1>
-  </header>
+/* 1. Headings */
 
- <main>
-   
-    <section>
-        <h2>Test:</h2>
-        <ul>
-          <li>This item is styled in royal blue.</li>
-          <li>This item is styled in forest green.</li>
-          <li>This item is styled in crimson red.</li>
 
-          <ul>
-            <li>This sub-item is violet with a light gray background.</li>
-            <ul>
-              <li>This inner item is dark orange with beige background.</li>
-            </ul>
-            <li>Back to violet with light gray background.</li>
-          </ul>
+/* 2. Force 'CSS' to stay uppercase */
 
-          <li>Back to royal blue for consistency.</li>
-        </ul>
-      </section>
-  
-  </main>
 
-  <footer>
-    <p>&#169; Sep 23 2025/ Nareman Hamdan</p>
-  </footer>
+/* 3. Paragraph styling */
 
-</body>
-</html>
 
+/* 4. Section borders */
+
+
+/* 5. List styling */
+
+
+/* Main list item colors */
+section:nth-of-type(2) > ul > li:nth-of-type(1) {
+    color: #2a52be;
+}
+
+section:nth-of-type(2) > ul > li:nth-of-type(2) {
+    color: #228b22;
+}
+
+section:nth-of-type(2) > ul > li:nth-of-type(3) {
+    color: #dc143c;
+}
+
+
+/* Sub-list */
+section:nth-of-type(2) > ul > ul > li:nth-of-type(1) {
+    color: #9400d3;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+
+/* Inner sub-list */
+section:nth-of-type(2) > ul > ul > ul > li:nth-of-type(1) {
+    color: #ff8c00;
+    background-color: #fdf6e3;
+    border-radius: 8px;
+    font-size: smaller;
+}
+
+
+/* Second violet item in sublist */
+section:nth-of-type(2) > ul > ul > li:nth-of-type(2) {
+    color: #9400d3;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+
+/* Final main list item */
+section:nth-of-type(2) > ul > li:nth-of-type(4) {
+    color: #2a52be;
+}
+
+
+/* Footer */
+footer {
+    border: 4px double red;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: #ffe6e6;
+    text-align: center;
+}
