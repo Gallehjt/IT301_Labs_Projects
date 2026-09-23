@@ -1,1 +1,70 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab7</title>
+    <style>
+         body {
+            display: flex;
+        }
+        #trash {
+            margin-top: auto;
+        }
+        #left {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            flex-shrink: 0;
+            color: darkorange;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #right {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            overflow: auto;
+            align-content: stretch;
+        }
+        #right  img {
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-grow: 1;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="right">
+        <img src="https://picsum.photos/100/100?random=1" alt="image" width="150px" height="200px">
+        <img src="https://picsum.photos/250/100?random=2" alt="image" width="250px" height="250px">
+        <img src="https://picsum.photos/150/100?random=3" alt="image" width="150px" height="150px">
+        <img src="https://picsum.photos/200/100?random=4" alt="image" width="200px" height="200px">
+        <img src="https://picsum.photos/100/100?random=5" alt="image" width="100px" height="100px">
+        <img src="https://picsum.photos/150/100?random=6" alt="image" width="150px" height="200px">
+        <img src="https://picsum.photos/200/100?random=7" alt="image" width="200px" height="200px">
+        <img src="https://picsum.photos/300/100?random=8" alt="image" width="300px" height="100px">
+        <img src="https://picsum.photos/150/100?random=9" alt="image" width="150px" height="200px">
+        <img src="https://picsum.photos/350/100?random=10" alt="image" width="350px" height="100px">
+        <img src="https://picsum.photos/150/100?random=11" alt="image" width="150px" height="200px">
+        <img src="https://picsum.photos/150/100?random=12" alt="image" width="150px" height="200px">
+        <img src="https://picsum.photos/200/100?random=13" alt="image" width="200px" height="200px">
+        <img src="https://picsum.photos/180/100?random=14" alt="image" width="180px" height="100px">
+        <img src="https://picsum.photos/325/100?random=15" alt="image" width="325px" height="100px">
+        <img src="https://picsum.photos/150/100?random=16" alt="image" width="150px" height="200px">
+        <img src="https://picsum.photos/120/100?random=17" alt="image" width="120px" height="100px">
+        <img src="https://picsum.photos/155/100?random=18" alt="image" width="155px" height="100px">
+        <img src="https://picsum.photos/350/100?random=19" alt="image" width="350px" height="100px">
+        <img src="https://picsum.photos/400/100?random=20" alt="image" width="400px" height="100px">
+    </div>
+</body>
+</html>
