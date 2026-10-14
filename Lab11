@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button{
+            background-color: blue;
+            font-size: 1.2em;
+            color: black;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <p id = "button">Click Me! 😊</p>
+<script>
+    const button = document.getElementById('button')
+    button.addEventListener('click', function myfunction(event){
+        button.style.backgroundColor = "red";
+        button.textContent = "Ouch! 🤕"
+        console.log(event);
+        })
+    window.addEventListener('mousemove', function myfunction(event){
+    if (event.target !== button) {
+        button.style.backgroundColor = "lightblue";
+        button.textContent = "I see you! 👀";}
+        })    
+    button.addEventListener('dblclick', function myfunction(event){
+        button.style.backgroundColor = "pink";
+        button.textContent = "Double trouble! 🤩"
+        console.log(event);
+        })
+    button.addEventListener('mouseenter', function myfunction(event){
+        button.style.backgroundColor = "yellow";
+        button.textContent = "Do not click! 😠"
+        console.log(event);
+        })
+    button.addEventListener('mouseleave', function myfunction(event){
+        button.style.backgroundColor = "lightgreen";
+        button.textContent = "Phew! 😌"
+        console.log(event);
+        })
+</script>
+</body>
