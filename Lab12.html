@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form action="#">
+        <label for="name">Name:</label>
+        <input type="name" id="name"><br><br><br>
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1"><br>
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2"><br><br>
+        <input type="radio" name="operation" value="add" checked>Add<br>
+        <input type="radio" name="operation" value="subtract">Subtract<br>
+        <input type="radio" name="operation" value="multiply">Multiply<br>
+        <input type="radio" name="operation" value="divide">Divide<br><br>
+        <button type="button" id="calculate">Calculate</button>
+        <button type="button" id="clearBtn">Clear</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+        const resultParagraph = document.getElementById('result');
+
+        document.getElementById('calculate').addEventListener('click', function(){
+            const val1 = Number(num1Input.value);
+            const val2 = Number(num2Input.value);
+
+            const checkedRadio = document.querySelector('[name=operation]:checked');
+            
+            if (!checkedRadio) {
+                resultParagraph.textContent = "Please select an operation.";
+                return;
+            }
+
+            const operation = checkedRadio.value;
+            let finalResult = 0;
+
+            if (operation === 'add') {
+                finalResult = val1 + val2;
+            } else if (operation === 'subtract') {
+                finalResult = val1 - val2;
+            } else if (operation === 'multiply') {
+                finalResult = val1 * val2;
+            } else if (operation === 'divide') {
+                if (val2 === 0) {
+                    resultParagraph.textContent = "Cannot divide by zero!";
+                    return;
+                }
+                finalResult = val1 / val2;
+            }
+
+            resultParagraph.textContent = `Result: ${finalResult}`;
+        });
+        document.getElementById('clearBtn').addEventListener('click', function(){
+            num1Input.value = '';
+            num2Input.value = '';
+            resultParagraph.textContent = '';
+        });
+    </script>
+</body>
+</html>
