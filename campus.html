@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get to know four areas of James Madison University's campus before your visit.">
+    <title>Discover JMU | Explore Campus</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!--This connects the page to the CSS file.-->
+</head>
+<body>
+    <!-- This skip link makes the page easier to navigate with a keyboard. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- The same header and navigation are used throughout Discover JMU. -->
+    <header class="site-header">
+        <div class="header-content">
+            <p class="site-name">Discover JMU</p>
+            <!--These are navigations links for the other pages-->
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="campus.html" aria-current="page">Campus</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="student-life.html">Student Life</a></li>
+                    <li><a href="dining.html">Dining</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--This is the main part of the page-->
+    <main id="main-content" class="page-content">
+        <!-- Introduction: this page is written for students thinking about attending JMU. -->
+        <section class="campus-intro" aria-labelledby="campus-heading">
+            <h1 id="campus-heading">Explore JMU's Campus</h1>
+            <p>
+                JMU has several campus areas, each with different buildings and places to explore. Here are four areas worth getting to know before your first visit.
+            </p>
+        </section>
+
+        <!-- I used a grid to organize the four campus cards into columns -->
+         <!--A media query in styles.css changes the layout for smaller screens-->
+        <section class="campus-areas" aria-label="Campus areas">
+            <div class="area-grid">
+                <!--I created a separate article for each separate area on campus, along with a picture to make it look nicer-->
+                <article class="area-card">
+                    <!--Every picture is credited appropriately-->
+                    <figure class="area-photo">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/f/fb/James_Madison_University.jpeg"
+                            alt="Wilson Hall overlooking the green lawn of the JMU Quad"
+                            width="1280" height="960" loading="lazy">
+                        <figcaption>
+                            Photo: <a href="https://commons.wikimedia.org/wiki/File:James_Madison_University.jpeg">Alma mater</a>
+                            (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>).
+                        </figcaption>
+                    </figure>
+                    <!--This part gives details on each part of campus based on my personal experience-->
+                    <div class="area-details">
+                        <h2>Bluestone &amp; the Quad</h2>
+                        <p>
+                            Bluestone is the heart of JMU. The Quad is a popular spot for students to walk through, relax, and hang out with friends.
+                        </p>
+                        <p class="area-landmarks"><strong>Look for:</strong> Wilson Hall and Carrier Library.</p>
+                    </div>
+                </article>
+
+                <article class="area-card">
+                    <figure class="area-photo">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Newman_Lake_with_Bridge.JPG"
+                            alt="Pedestrian bridge crossing Newman Lake with trees along the shore"
+                            width="2048" height="1536" loading="lazy">
+                        <figcaption>
+                            Photo: <a href="https://commons.wikimedia.org/wiki/File:Newman_Lake_with_Bridge.JPG">Rtcpenguin</a>
+                            (<a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a>).
+                        </figcaption>
+                    </figure>
+                    <div class="area-details">
+                        <h2>Lakeside</h2>
+                        <p>
+                            Around Newman Lake, you'll find a different view of campus along with academic and athletics buildings. The lake is an easy landmark to remember.
+                        </p>
+                        <p class="area-landmarks"><strong>Look for:</strong> Newman Lake, Godwin Hall, and Showker Hall.</p>
+                    </div>
+                </article>
+
+                <article class="area-card">
+                    <figure class="area-photo">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Festival_Conference_and_Student_Center_%28JMU%29.jpg"
+                            alt="Glass-fronted Festival Conference and Student Center on JMU's east side"
+                            width="2100" height="1575" loading="lazy">
+                        <figcaption>
+                            Photo: <a href="https://commons.wikimedia.org/wiki/File:Festival_Conference_and_Student_Center_(JMU).jpg">Ben Schumin</a>
+                            (<a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a>).
+                        </figcaption>
+                    </figure>
+                    <div class="area-details">
+                        <h2>Skyline</h2>
+                        <p>
+                            The Skyline area is located on JMU's east side. Skyline includes science buildings, Rose Library, and the Festival Conference and Student Center, as well as the beautiful Edith J. Carrier Arboretum, a 63-acre botanical garden.
+                        </p>
+                        <p class="area-landmarks"><strong>Look for:</strong> Rose Library and Festival.</p>
+                    </div>
+                </article>
+
+                <article class="area-card">
+                    <figure class="area-photo">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Hillside_Hall_%28JMU%29.jpg"
+                            alt="Hillside Hall beside a grassy open space where students are sitting"
+                            width="2272" height="1704" loading="lazy">
+                        <figcaption>
+                            Photo: <a href="https://commons.wikimedia.org/wiki/File:Hillside_Hall_(JMU).jpg">Ben Schumin</a>
+                            (<a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a>).
+                        </figcaption>
+                    </figure>
+                    <div class="area-details">
+                        <h2>Hillside</h2>
+                        <p>
+                            Hillside connects you to some of JMU's student gathering spaces. It includes the Grafton-Stovall theater and The Union, a popular area for students to hang out and study.
+                        </p>
+                        <p class="area-landmarks"><strong>Look for:</strong> The Union and Grafton-Stovall Theatre.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!--I gave some personal advice since some people are gonna be unfamiliar with the campus when they come for the first time-->
+        <p class="page-note">Tip: If you visit JMU, walking around campus can help you get a feel for each area.</p>
+    </main>
+
+    <footer class="site-footer">
+        <p>Visit the <a href="https://www.jmu.edu/">official JMU website</a> for more information.</p>
+    </footer>
+</body>
+</html>

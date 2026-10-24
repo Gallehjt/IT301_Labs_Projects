@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Helps display for different-sized screens-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover how James Madison University grew from a small teachers school into the JMU campus we know today.">
+    <!--Title of page-->
+    <title>Discover JMU | Campus History</title>
+    <!--Links to the style sheet-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Skip link supports visitors who use a keyboard to navigate. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- I use the same header/navigation for all pages -->
+    <header class="site-header">
+        <div class="header-content">
+            <p class="site-name">Discover JMU</p>
+            <!--Links to the other pages-->
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                    <li><a href="history.html" aria-current="page">History</a></li>
+                    <li><a href="student-life.html">Student Life</a></li>
+                    <li><a href="dining.html">Dining</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--Main contains the info for the History page-->
+    <main id="main-content" class="page-content">
+        <!--I used purple and gold in style.css for JMU colors-->
+        <section class="history-intro" aria-labelledby="history-heading">
+            <p class="history-kicker">Established in 1908</p>
+            <h1 id="history-heading">The History of JMU</h1>
+        <p>JMU started as a school for women preparing to become teachers. Over the years, it expanded into the university we know today.</p>
+        </section>
+
+        <!--I used an ordered list to go chronologically. This is a relatively condensed history of JMU, I didn't wanna make this too long.-->
+        <section aria-labelledby="timeline-heading">
+            <h2 id="timeline-heading">Important Dates</h2>
+            <ol class="timeline">
+                <li><strong>1908</strong> &mdash; JMU was founded, although it was named The State Normal and Industrial School for Women at Harrisonburg, and it functioned as a school for teachers.</li>
+                <li><strong>1931</strong> &mdash; Wilson Hall was dedicated and became one of the campus's most recognizable buildings. You can hear the clock tower chime every hour.</li>
+                <li><strong>1938</strong> &mdash; The school was renamed to Madison College.</li>
+                <li><strong>1966</strong> &mdash; Madison College became fully coeducational, and was desegregated as well.</li>
+                <li><strong>1977</strong> &mdash; The school was again renamed to James Madison University.</li>
+            </ol>
+        </section>
+        <!--Fun fact for the reader.-->
+        <p class="page-note">You can still see part of JMU's history in the older buildings around the Quad.</p>
+        </main>
+    <footer class="site-footer">
+        <p>Visit the <a href="https://www.jmu.edu/">official JMU website</a> for more information.</p>
+    </footer>
+</body>
+</html>

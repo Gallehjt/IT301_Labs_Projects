@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Displays it correctly no matter what size screen is-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore dining halls, food courts, and quick places to eat at James Madison University.">
+    <title>Discover JMU | Dining</title>
+    <!--links to css page-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- This lets keyboard users go to main content -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Shared header: the navigation links connect all five project pages. -->
+    <header class="site-header">
+        <div class="header-content">
+            <p class="site-name">Discover JMU</p>
+            <nav aria-label="Main navigation">
+                <!--link the other pages-->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="student-life.html">Student Life</a></li>
+                    <li><a href="dining.html" aria-current="page">Dining</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="page-content">
+        <!--I talk a little bit about the dining on campus. I made sure to mention our ranking for Best Campus Food since that's a major draw for students-->
+        <section class="dining-intro" aria-labelledby="dining-heading">
+            <!--I put up a heading on the top of the page-->
+            <p class="dining-label">Food around campus</p>
+            <h1 id="dining-heading">Dining at JMU</h1>
+            <p>
+                JMU has been ranked No. 3 in the nation for Best Campus Food. Students can enjoy our dining halls or the various food courts and cafes across campus
+            </p>
+        </section>
+
+        <!-- I wanted to talk about the two dining halls separately -->
+        <section class="dining-halls" aria-labelledby="halls-heading">
+            <h2 id="halls-heading">The Main Dining Halls</h2>
+            <!--Used a grid so the dining halls are right next to each other-->
+            <div class="dining-hall-grid">
+                <article class="dining-hall">
+                    <h3>D-Hall</h3>
+                    <p class="dining-location">Bluestone / West Campus</p>
+                    <p>
+                        D-Hall is an all-you-care-to-eat dining hall near the Quad. It offers a range of choices, such as pizza, salads, and rotating hot meals. It also houses a Chick-Fil-A and a Steak-N-Shake below it.
+                    </p>
+                    <!--I put links to the actual dining hall websites to give people an actual look at things-->
+                    <p><a href="https://jmu.mydininghub.com/en/location/d-hall">View D-Hall details and menus</a></p>
+                </article>
+                <article class="dining-hall">
+                    <h3>E-Hall</h3>
+                    <p class="dining-location">Skyline / East Campus</p>
+                    <p>
+                        E-Hall is another all-you-care-to-eat dining hall. It's convenient for students spending time on East Campus and includes a variety of stations and meal choices.
+                    </p>
+                    <p><a href="https://jmu.mydininghub.com/en/location/e-hall">View E-Hall details and menus</a></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- I put in a little table to show the other dining spots -->
+        <section class="dining-other" aria-labelledby="more-dining-heading">
+            <h2 id="more-dining-heading">Other Places to Grab Food</h2>
+            <p>JMU also has food courts, cafés, and places to pick up a quick bite.</p>
+            <!--Lets people scroll on small screens-->
+            <div class="dining-table-scroll">
+                <table class="dining-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Location</th>
+                            <th scope="col">Campus Area</th>
+                            <th scope="col">What You Can Find</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Festival Food Court</th>
+                            <td>Skyline</td>
+                            <td>Several quick-service choices in the Festival building.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dukes Dining</th>
+                            <td>Near the Student Success Center</td>
+                            <td>Different counters with options such as pizza and sandwiches.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Starbucks at Rose Library</th>
+                            <td>Skyline</td>
+                            <td>Coffee and a snack while studying or visiting the library.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Lakeside Café</th>
+                            <td>Lakeside</td>
+                            <td>A café option near the College of Business.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--Link to all the dining options on campus-->
+            <p class="dining-source">
+                See <a href="https://jmu.mydininghub.com/en/locations">JMU Dining's current locations and menus</a> for the full list and up-to-date details.
+            </p>
+        </section>
+
+        <!-- Some important info about dining that's probably important for people coming in -->
+        <aside class="dining-tip" aria-labelledby="meal-plan-heading">
+            <h2 id="meal-plan-heading">What About Meal Plans?</h2>
+            <p>
+                JMU offers meal plans, and different locations may accept meal swipes, Dining Dollars, or other payment methods. Options and hours can change, so check the <a href="https://jmu.mydininghub.com/en/meal-plans">official meal plan information</a> before choosing a plan or visiting a dining location.
+            </p>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <p>Visit the <a href="https://www.jmu.edu/">official JMU website</a> for more information.</p>
+    </footer>
+</body>
+</html>

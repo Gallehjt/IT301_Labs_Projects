@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Displays screen on different devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore student life at James Madison University, from clubs and campus activities to Duke traditions and recreation.">
+    <title>Discover JMU | Student Life</title>
+    <!--Connects to CSS file-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- This skip link makes the site easier to navigate with a keyboard. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- All pages use the same header and navigation. -->
+    <header class="site-header">
+        <div class="header-content">
+            <p class="site-name">Discover JMU</p>
+            <!--Other pages linked here-->
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="student-life.html" aria-current="page">Student Life</a></li>
+                    <li><a href="dining.html">Dining</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="page-content">
+        <section class="life-intro">
+            <!--I used flexbox to put the introduction and club count next to each other-->
+            <div>
+                <h1 id="life-heading">Student Life at JMU</h1>
+                <p>
+                    College isn't just about school, it's also about meeting people, discovering new interests, and making memories. JMU students can meet friends and get involved in many ways.
+                </p>
+            </div>
+            <div class="life-highlight">
+                <!--I made sure to advertise just how many clubs we have-->
+                <strong>400+</strong>
+                <span>clubs and organizations</span>
+            </div>
+        </section>
+
+        <!--Here I used a two-column setup, one for activities and a sidebar.-->
+        <div class="life-layout">
+            <!--This is the main section, which talks about activities for students-->
+            <section class="life-activities" aria-labelledby="activities-heading">
+                <h2 id="activities-heading">Things to Do at JMU</h2>
+                <article class="life-topic">
+                    <h3>Join a Club or Organization</h3>
+                    <p>
+                        From academic and cultural groups to volunteer organizations and hobby clubs, there are lots of ways to meet people who share your interests. Student Org Night is the best place for new students to explore their options and find where they fit in.
+                    </p>
+                    <p><a href="https://www.jmu.edu/student-life/clubs-organizations.shtml">Learn about JMU clubs and organizations</a></p>
+                </article>
+                <!--This part talks about the campus events and activities-->
+                <article class="life-topic">
+                    <h3>Enjoy Events and Activities</h3>
+                    <p>
+                        JMU's University Program Board (UPB) organizes events such as movies, concerts, and other campus activities. There's never a dull moment at JMU!
+                    </p>
+                    <p><a href="https://www.jmu.edu/osl/upb/index.shtml">Explore University Program Board events</a></p>
+                </article>
+
+                <article class="life-topic">
+                    <h3>Stay Active with UREC</h3>
+                    <p>
+                        University Recreation (UREC) offers fitness activities, intramural sports, group exercise, and other recreational programs.
+                    </p>
+                    <p><a href="https://www.jmu.edu/recreation/index.shtml">See what UREC offers</a></p>
+                </article>
+
+                <article class="life-topic">
+                    <h3>Show Your Duke Spirit</h3>
+                    <p>
+                        Students support the Dukes at sports games and campus events. Purple and gold are everywhere!
+                    </p>
+                    <p><a href="https://www.jmu.edu/student-life/spirit-traditions.shtml">Read about JMU traditions</a></p>
+                </article>
+            </section>
+
+            <!-- This sidebar some advice to up-and-coming students on how to make friends. -->
+            <aside class="life-sidebar" aria-labelledby="start-heading">
+                <h3 id="start-heading">Getting Started</h3>
+                <p>If you become a Duke, here are a few things you can try:</p>
+                <!--Making an ordered list on how to meet new people-->
+                <ol>
+                    <li>Visit Student Org Night to explore clubs.</li>
+                    <li>Check the campus events calendar.</li>
+                    <li>Tour UREC and try a recreational activity.</li>
+                    <li>Attend a JMU event and wear purple!</li>
+                </ol>
+                <p>
+                    You can also read about <a href="campus.html">campus areas</a> and <a href="dining.html">dining options</a> on this website.
+                </p>
+            </aside>
+        </div>
+        <!--Created a form for people to submit what they're excited about for feedback-->
+         <section class="form-section" aria-labelledby="form-heading">
+            <h3 id="form-heading">What Interests You?</h3>
+            <p>Try this simple practice form for prospective students.</p>
+            <!--Get method sends answers and refreshes-->
+            <form action="student-life.html" method="get">
+                <!--Label is connected to dropdown with for and id-->
+                <label for="interest">What would you like to try first?</label>
+                <select id="interest" name="interest" required>
+                    <option value="">Choose one</option>
+                    <option value="clubs">Joining a club</option>
+                    <option value="recreation">Visiting UREC</option>
+                    <option value="events">Going to a campus event</option>
+                </select>
+                <!--This makes sure the rating value only accepts values from 1 to 5-->
+                <label for="rating">How excited are you to visit? (1 to 5)</label>
+                <input id="rating" name="rating" type="number" min="1" max="5" required>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p class="small-note">This is just an example form for class. It reloads the page and does not save your answers.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Visit the <a href="https://www.jmu.edu/">official JMU website</a> for more information.</p>
+    </footer>
+</body>
+</html>

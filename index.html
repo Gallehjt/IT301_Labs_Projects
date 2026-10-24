@@ -3,79 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT 301 Labs and Projects</title>
-
-    <link rel="stylesheet" href="main.css">
+    <meta name="description" content="Discover JMU: a student-made introduction to James Madison University for future students.">
+    <title>Discover JMU | Home</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <header>
-        <h1>IT 301 Labs and Projects</h1>
-        <p>My Labs and Projects</p>
+    <!-- Skip link helps keyboard users get to the main page content. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Shared header and navigation will appear on all five pages. -->
+    <header class="site-header">
+        <div class="header-content">
+            <p class="site-name">Discover JMU</p>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="student-life.html">Student Life</a></li>
+                    <li><a href="dining.html">Dining</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>
-                My name is Jordan, and I am an IT Major. I am hoping to get
-                a job with a video game company or another creative group,
-                since I have always had an interest in art.
-            </p>
-            <p>
-                I am hoping to learn more about web development in IT 301,
-                specifically how to develop websites of my own.
-            </p>
+
+    <main id="main-content" class="page-content">
+        <!-- Welcome text introduces the website to prospective JMU students. -->
+        <section class="welcome">
+            <h1 id="welcome-heading">Welcome to JMU!</h1>
+            <p>Thinking about attending James Madison University? This website is a quick guide to its campus, history, student life, and dining options.</p>
         </section>
-        <section>
-            <h2>Projects and Labs</h2>
-            <ul>
-                <li>
-                    <a href="styling%20with%20CSS.html">
-                        Lab 2
-                    </a>
-                </li>
-                <li>
-                    <a href="Letter%20o.html">
-                        Lab 5
-                    </a>
-                </li>
-                <li>
-                    <a href="Lab6.html">
-                        Lab 6
-                    </a>
-                </li>
-                <li>
-                    <a href="Lab7.html">
-                        Lab 7
-                    </a>
-                </li>
-                <li>
-                    <a href="Lab8.html">
-                        Lab 8
-                    </a>
-                </li>
-                <li>
-                    <a href="Lab9.html">
-                        Lab 9
-                    </a>
-                </li>
-                <li>
-                    <a href="Lab10.html">
-                        Lab 10
-                </li>
-                <li>
-                    <a href="Lab11.html">
-                        Lab 11
-                </li>
-                <li>
-                    <a href="Lab12.html">
-                        Lab 12
-                </li>
-            </ul>
+
+        <!-- Campus photo is from Wikimedia Commons; credit and license appear below it. -->
+        <figure class="campus-photo">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/fb/James_Madison_University.jpeg"
+                alt="Students relaxing on the grassy Quad in front of Wilson Hall at James Madison University"
+                width="1280"
+                height="960"
+            >
+            <span class="photo-label">The Quad at JMU</span>
+            <figcaption>
+                Photo by <a href="https://commons.wikimedia.org/wiki/File:James_Madison_University.jpeg">Alma mater / Wikimedia Commons</a>,
+                <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+            </figcaption>
+        </figure>
+
+        <!-- Each link leads to a different section of the future website. -->
+        <section class="explore" aria-labelledby="explore-heading">
+            <h2 id="explore-heading">Explore JMU</h2>
+            <p>Choose a topic below to learn more about the university.</p>
+
+            <div class="page-links">
+                <a class="page-button" href="campus.html">Explore Campus</a>
+                <a class="page-button" href="history.html">Campus History</a>
+                <a class="page-button" href="student-life.html">Student Life</a>
+                <a class="page-button" href="dining.html">Dining Options</a>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 Jordan | IT 301 Labs and Projects</p>
+
+    <footer class="site-footer">
+        <p>Visit the <a href="https://www.jmu.edu/">official JMU website</a> for more information.</p>
     </footer>
 </body>
 </html>
