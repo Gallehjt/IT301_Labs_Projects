@@ -1,0 +1,249 @@
+/*This is the css file used to style the html pages.*/
+* {
+    box-sizing: border-box;
+}
+/*This is the default style for the website*/
+body {
+    margin: 0;
+    background: #f8f7f3;
+    color: #292929;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/*This uses different fonts for headings compared to regular text.*/
+h1, h2, h3, .site-name {
+    font-family: Georgia, serif;
+}
+/*This is where I color the main heading and links*/
+h1, h2, h3 { color: #450084; }
+a { color: #450084; }
+/*This creates an outline if you're navigating with a keyboard*/
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible {
+    outline: 3px solid #977524;
+    outline-offset: 3px;
+}
+
+/*Absolute positioning is used for the skip link.*/
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 12px;
+    padding: 8px 12px;
+    background: white;
+    z-index: 10;
+}
+.skip-link:focus { top: 10px; }
+
+/*Header and navigation used across all pages.*/
+.site-header {
+    /*Sticky keeps the header at the top when you're scrolling*/
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: #450084;
+    border-bottom: 4px solid #cbb677;
+}
+/*I used flexbox to place the website title and navigation next to each other*/
+.header-content {
+    max-width: 1000px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+/*Styling the Discover JMU title in the header*/
+.site-name {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*Arranging the navigation links horizontally*/
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*The links are colored white, and underline when you hover mouse over*/
+.nav-links a { color: white; font-weight: bold; text-decoration: none; }
+.nav-links a:hover, .nav-links a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+/*Limit the content width and centers it*/
+.page-content { max-width: 1000px; margin: auto; padding: 30px 24px 55px;}
+/*Adds spacing below for sections in the main content*/
+.page-content > section { margin-bottom: 25px; }
+/*The footer is colored purple like the official JMU website, with white text inside to make it easy to read*/
+.site-footer { background: #450084; color: white; text-align: center; padding: 18px 20px; }
+.site-footer p { margin: 0; }
+.site-footer a { color: #f1dc9c; }
+/*This is for smaller text*/
+.small-note { font-size: 0.9rem; }
+/*I used a light purple color with a purple left border to make it simple*/
+.page-note { margin-top: 25px; padding: 15px; border-left: 4px solid #450084; background: #eee7f4; }
+
+/*Centering the welcome message/explore section*/
+.welcome, .explore { text-align: center; }
+.campus-photo {
+    position: relative; /*Relative positioning anchors the photo label.*/
+    max-width: 800px;
+    margin: 25px auto;
+}
+/*Limiting the height and making the photo responsive*/
+.campus-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 390px;
+    object-fit: cover;
+}
+/*Using absolute positioning to put the label over the image*/
+.photo-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 7px 12px;
+    background: #450084;
+    color: white;
+}
+/*I put smaller text below the image so I could give credit for the photos*/
+.campus-photo figcaption { margin-top: 6px; font-size: 0.85rem; }
+/*Using a CSS grid to arrange the homepage links into two columns*/
+.page-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 650px;
+    margin: 20px auto;
+}
+/*This is for the buttons. I styled them purple for JMU and white for readability.*/
+.page-button {
+    display: block;
+    padding: 13px;
+    background: #450084;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*Changes the color slightly when you hover your mouse over the button*/
+.page-button:hover { background: #61239a; }
+
+/*Adds spacing around the intro and cards for readability*/
+.campus-intro { margin-bottom: 25px; }
+.campus-areas { margin-top: 15px; }
+/*Creates a two-column grid with the four campus cards evenly spaced*/
+.area-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+/*Each campus card is styled with a white background and gold top border for JMU spirit*/
+.area-card { overflow: hidden; background: white; border: 1px solid #ddd6df; border-top: 4px solid #cbb677; }
+/*Removes default margin*/
+.area-photo { margin: 0; }
+/*Makes the pics the same height and fills the containers to avoid leakage*/
+.area-photo img { display: block; width: 100%; height: 200px; object-fit: cover; }
+/*Makes sure photo credits appear*/
+.area-photo figcaption { padding: 6px 12px; font-size: 0.75rem; }
+/*Adds spacing around the text in each card*/
+.area-details { padding: 4px 18px 18px; }
+.area-details h2 { margin-bottom: 8px; }
+.area-landmarks { margin-bottom: 0; }
+
+/*Using same intro design for the History and Dining page*/
+.history-intro, .dining-intro {
+    background: #450084;
+    color: white;
+    padding: 26px;
+    border-bottom: 5px solid #cbb677;
+    border-radius: 5px;
+}
+/*Using white headings in the introduction boxes*/
+.history-intro h1, .dining-intro h1 { margin: 5px 0 12px; color: white; }
+/*Gets rid of default margins*/
+.history-intro p, .dining-intro p { margin: 0; }
+/*Small gold text above intro headings*/
+.history-kicker, .dining-label { font-size: 0.9rem; font-weight: bold; color: #f1dc9c; text-transform: uppercase; }
+.timeline { padding-left: 36px; max-width: 850px; }
+/*I gave each entry in the timeline its own box*/
+.timeline li { margin-bottom: 14px; padding: 13px 18px; background: white; border-left: 4px solid #cbb677; }
+/*Historical dates are colored purple for noticeability*/
+.timeline strong { color: #450084; }
+
+/*This lets the activity section shrink*/
+.life-activities { min-width: 0; }
+/*Flexbox puts the introduction next to the club count*/
+.life-intro { display: flex; align-items: center; gap: 30px; }
+.life-highlight {
+    min-width: 145px;
+    padding: 16px;
+    background: #eee7f4;
+    border-left: 5px solid #cbb677;
+    text-align: center;
+}
+/*Styles the box that shows the club count. I wanted to make it small enough to place next to the the intro text*/
+.life-highlight strong { display: block; color: #450084; font-size: 2rem; }
+.life-highlight span { display: block; }
+/*Creates a small sidebar and a large activities column*/
+.life-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 25px; }
+/*Separates student life with lines and spacing*/
+.life-topic { border-bottom: 1px solid #d9d3dc; padding: 6px 0; }
+.life-topic h3 { margin-bottom: 5px; }
+.life-topic p { margin-top: 0; }
+/*Getting started information is placed here*/
+.life-sidebar { align-self: start; padding: 18px; background: #f3eddf; }
+.life-sidebar h2 { margin-top: 0; }
+.life-sidebar ol { padding-left: 24px; }
+/*Purple background for student interest form.*/
+.form-section { max-width: 550px; margin-top: 30px; padding: 20px; background: #eee7f4; }
+/*This stacks the form labels/inputs vertically*/
+.form-section form { display: grid; gap: 10px; }
+/*Boldens form labels*/
+.form-section label { font-weight: bold; }
+/*Using the same look for the input and dropdown*/
+.form-section input, .form-section select {
+    width: 100%; padding: 9px; font: inherit;
+    background: white; border: 1px solid #777;
+}
+/*Styling the submit button*/
+.form-section button {
+    width: fit-content; padding: 10px 22px; border: 0;
+    background: #450084; color: white; font: inherit; cursor: pointer;
+}
+
+.dining-halls, .dining-other { margin-top: 30px; }
+/*Using a slightly smaller text size for the source link*/
+.dining-source { font-size: 0.95rem; }
+/*Creates two equal columns for D Hall and E Hall*/
+.dining-hall-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.dining-hall { padding: 18px; background: white; border: 1px solid #ded7e4; border-top: 5px solid #cbb677; }
+.dining-hall h3 { margin: 0; font-size: 1.5rem; }
+.dining-location { margin: 0 0 12px; color: #5f4185; font-weight: bold; }
+/*This lets you scroll horizontally on smaller screens*/
+.dining-table-scroll { overflow-x: auto; }
+/*Table fills available width*/
+.dining-table { width: 100%; border-collapse: collapse; background: white; }
+.dining-table th, .dining-table td { border: 1px solid #c9c2cf; padding: 12px; text-align: left; }
+.dining-table thead { background: #450084; color: white; }
+/*Reuses light purple color for the meal plan info*/
+.dining-tip { margin-top: 25px; padding: 15px 18px; background: #eee7f4; }
+
+/*This makes the website adjust for smaller screens*/
+@media (max-width: 700px) {
+    /*Flexbox stacks vertically*/
+    .header-content, .life-intro { flex-direction: column; }
+    /*Navigation and header elements are centered*/
+    .header-content { text-align: center; }
+    .nav-links { justify-content: center; gap: 10px 14px; }
+    /*Reduces padding for smaller screens*/
+    .page-content { padding: 20px 16px 40px; }
+    /*Photo label is moved below the image*/
+    .page-links, .area-grid, .dining-hall-grid, .life-layout { grid-template-columns: 1fr; }
+    .photo-label { position: static; display: block; }
+    /*Club count is filled to the available width*/
+    .life-highlight { width: 100%; }
+}
