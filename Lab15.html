@@ -83,77 +83,106 @@
     </form>
 
     <script>
-         const API_URL = "https://jsonplaceholder.typicode.com/posts";
-         let postArray = [];
-
-         function renderPosts(postsToRender) {
-            document.querySelectorAll('article').forEach((article) => {
-               article.remove();
-            }
-         )};
-
-         const container = document.body;
-
-         postsToRender.forEach(post => {
+    const API_URL = "https://jsonplaceholder.typicode.com/posts";
+    let postsArray = [];
+    
+    function renderPosts(postsToRender) {
+        document.querySelectorAll('article').forEach((article) => {
+            article.remove();
+        });
+        const container = document.body;
+        postsToRender.forEach(post => {
             const article = document.createElement('article');
-
-            const h2 = document.createElement('h2')
-
-            const p = document.createElement('p')
-            
-            const metaInfo = document.createElement('p')
+            const h2 = document.createElement('h2');
+            h2.textContent = post.title;
+            const p = document.createElement('p');
+            p.textContent = post.body;
+            const metaInfo = document.createElement('p');
             metaInfo.className = 'meta-info';
-            metaInfo.textContent = 'User ID: ${post.userID} | Post ID: ${post.id}';
+            metaInfo.textContent = `User ID: ${post.userId} | Post ID: ${post.id}`;
             article.appendChild(h2);
             article.appendChild(p);
             article.appendChild(metaInfo);
-            article.appendChild(article);
-         });
-
-         function renderMessage(message) {
-            document.querySelectorAll('article').forEach((article) => {
-               article.remove();
-            }
-         )}
-         
-         const article = document.createElement('article');
-         const p = document.createElement('p');
-         p.textContent = message;
-         article.appendChild(p);
-         document.body.appendChild(article);
-         
-         async function fetchPosts() {
-            try {
-               const response = await fetch(API_URL);
-               postsArray = await response.json();
-               console.table(postsArray);
-               renderPosts(postsArray);
-            } catch (error) {
-               console.error('Error', error);
-            }
-         }
-
-         document.getElementById('filterBtn').addEventListener('click', () => {
-            const selectedUserID = document.getElementById('userID').value;
-            if (!selectedUserID) {
-               console.warn('Select a user ID from the dropdown')};
-               return;
-         
-         const filteredPosts = postsArray.filter(post => post.userID == selectedUserID);
-         console.log('Posts from user ID ${selectedUserID}:');
-         console.table(filteredPosts);
-      });
-      document.getElementById('displayUserBtn').addEventListener('click', () => {
-         const enteredUserID = document.getElementById('displayUserID').value;
-         if (!enteredUserID) {
-            alert('Please enter a valid User ID');
+    
+            container.appendChild(article);
+        });
+    }
+    
+    function renderMessage(message) {
+        document.querySelectorAll('article').forEach((article) => {
+            article.remove();
+        });
+        const article = document.createElement('article');
+        const p = document.createElement('p');
+    
+        p.textContent = message;
+        article.appendChild(p);
+        document.body.appendChild(article);
+    }
+        async function fetchPosts() {
+        try {
+            const response = await fetch(API_URL);
+            postsArray = await response.json();
+    
+            console.table(postsArray);
+            renderPosts(postsArray);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }    
+    document.getElementById('filterBtn').addEventListener('click', () => {
+        const selectedUserID = document.getElementById('userID').value;
+    
+        if (!selectedUserID) {
+            console.warn('Select a user ID from the dropdown');
             return;
-         }
-         const userPosts = postsArray.filter(post => post.userID == enteredUserID);
-         if (userPosts.length > 0) {
-            renderPosts
-         }
-      })
+        }
+        const filteredPosts = postsArray.filter(
+            post => post.userId == selectedUserID
+        );
+    
+        console.log(`Posts from user ID ${selectedUserID}:`);
+        console.table(filteredPosts);
+    });
+    
+    document.getElementById('displayUserBtn').addEventListener('click', () => {
+        const enteredUserID = document.getElementById('displayUserID').value;
+    
+        if (!enteredUserID || enteredUserID < 1 || enteredUserID > 10) {
+            alert('Please enter a valid User ID between 1 and 10');
+            return;
+        }
+    
+        const userPosts = postsArray.filter(
+            post => post.userId == enteredUserID
+        );
+    
+        if (userPosts.length > 0) {
+            renderPosts(userPosts);
+        } else {
+            renderMessage('No posts found for this user.');
+        }
+    });
+    document.getElementById('findBtn').addEventListener('click', () => {
+        const enteredPostID = document.getElementById('postID').value;
+    
+        if (!enteredPostID || enteredPostID < 1 || enteredPostID > 100) {
+            renderMessage('Post not found.');
+            return;
+        }
+    
+        const foundPost = postsArray.find(
+            post => post.id == enteredPostID
+        );
+    
+        if (foundPost) {
+            renderPosts([foundPost]);
+        } else {
+            renderMessage('Post not found.');
+        }
+    });
+    
+    fetchPosts();
 
     </script>
 
